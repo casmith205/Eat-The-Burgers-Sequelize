@@ -1,0 +1,39 @@
+<h1 class="text-center"> Let's eat some burgers!</h1>
+
+<div class="img-fluid text-center">
+  <img src="/assets/img/burger.jpg" id="burgerImg">
+</div>
+<hr>
+
+<div class="row">
+  <div class="col-md-6" id="availableSection">
+    <div class="avail">
+      <h3>Burgers available to devour...</h3>
+      <br> {{#each burgers}} {{#unless devoured}} {{burger_name}}
+      <button class="devour-burg" data-id="{{id}}" data-devour="{{devoured}}">
+        Devour
+      </button>
+      <br> {{/unless}} {{/each}}
+    </div>
+  </div>
+  <br>
+  <div class="col-md-6" id="devouredSection">
+    <h3>Burgers that you've already devoured...</h3>
+    <br> {{#each burgers}} {{#if devoured}} {{burger_name}}
+    <br> {{/if}} {{/each}}
+  </div>
+</div>
+<br>
+<hr>
+
+  <h2>Add a Burger</h2>
+  <br>
+  <form class="create-form">
+
+    <div class="form-group">
+      <label for="burg">What is this burger called?</label>
+      <input type="text" id="burg" name="name">
+    </div>
+
+    <button type="submit">Add Burger</button>
+  </form>

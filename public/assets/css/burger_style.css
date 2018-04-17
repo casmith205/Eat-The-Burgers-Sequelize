@@ -1,0 +1,33 @@
+body{
+    background-image: url(../img/halftone-yellow.png);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+hr{
+    background-color: grey;
+}
+
+.container{
+    background-color: white;
+    opacity: .8;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button{
+    background-color: #fdd667;
+    border-color: #fcd06b;
+    border-radius: 8px;
+    font-weight: bolder;
+}
+
+button:hover{
+    background-color:white;
+    border-color:black;
+    
+
+}
+
+
+
