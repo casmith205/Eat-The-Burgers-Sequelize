@@ -15,8 +15,10 @@ module.exports = function (app) {
     db.Burger.findAll({
     })
       .then(function (result) {
-        console.log(result);
-        res.render("index", result);
+        var burgerObj = {
+          burgers: result
+        }
+        res.render("index", burgerObj);
       });
   });
 
@@ -45,14 +47,14 @@ module.exports = function (app) {
 
   // PUT route for updating burgers
   app.put("/api/burgers/:id", function (req, res) {
-    db.Post.update("Burgers",
+    db.Burger.update(req.body,
       {
         where: {
           id: req.params.id
         }
       })
-      .then(function (dbPost) {
-        res.json(dbPost);
+      .then(function (result) {
+        res.json(result);
       });
   });
 };

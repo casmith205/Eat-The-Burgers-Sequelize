@@ -9,7 +9,7 @@
   <div class="col-md-6" id="availableSection">
     <div class="avail">
       <h3>Burgers available to devour...</h3>
-      <br> {{#each burger}} {{#unless devoured}} {{burger_name}}
+      <br> {{#each burgers}} {{#unless devoured}} {{burger_name}}
       <button class="devour-burg" data-id="{{id}}" data-devour="{{devoured}}">
         Devour
       </button>
@@ -19,7 +19,7 @@
   <br>
   <div class="col-md-6" id="devouredSection">
     <h3>Burgers that you've already devoured...</h3>
-    <br> {{#each burger}} {{#if devoured}} {{burger_name}}
+    <br> {{#each burgers}} {{#if devoured}} {{burger_name}}
     <br> {{/if}} {{/each}}
   </div>
 </div>
