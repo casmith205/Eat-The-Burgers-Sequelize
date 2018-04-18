@@ -2,11 +2,9 @@ $(function () {
     $(".devour-burg").on("click", function (event) {
         // Grab id from the button
         var id = $(this).data("id");
-        // Grab devoured state from the button
-        var devour = $(this).data("devour");
         // Set the devoured boolean to the button data value
         var devState = {
-            devoured: devour
+            devoured: true
         };
         // Send the PUT request
         $.ajax("/api/burgers/" + id, {
