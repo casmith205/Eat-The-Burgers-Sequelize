@@ -27,7 +27,7 @@
   <div class="col-md-6" id="devouredSection">
     <h3>Burgers that have been devoured...</h3>
     <br> {{#each burgers}} {{#if devoured}}
-    <div class="devoureds">
+    <div class="devoureds text-center">
       <b>{{burger_name}}</b> (Eaten by... {{#each Customers}}<b>{{customer_name}}</b>{{/each}})
     </div>
     <br>

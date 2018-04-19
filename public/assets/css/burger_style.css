@@ -28,7 +28,8 @@ button:hover{
 }
 
 .burgers{
-    border: solid thick grey;
+    border: solid medium grey;
+    background-color: whitesmoke;
     border-radius: 15px;
     padding: 10px
 }
