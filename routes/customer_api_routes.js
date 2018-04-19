@@ -25,9 +25,9 @@ module.exports = function (app) {
 
   // POST route for saving a new customer
   app.post("/api/customers", function (req, res) {
-    console.log(req.body);
     db.Customer.create({
-      customer_name: req.body.customer_name
+      customer_name: req.body.customer_name,
+      BurgerId: req.body.BurgerId
     })
       .then(function (result) {
         res.json(result);

@@ -16,7 +16,6 @@ module.exports = function (app) {
       include: [db.Customer]
     })
       .then(function (result) {
-        console.log(result);
         var burgerObj = {
           burgers: result
         }
