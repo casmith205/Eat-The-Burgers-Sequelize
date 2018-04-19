@@ -9,23 +9,29 @@
   <div class="col-md-6" id="availableSection">
     <div class="avail">
       <h3>Burgers available to devour...</h3>
-      <br> {{#each burgers}} {{#unless devoured}} {{burger_name}}
-      <div class="form-group">
-        <label for="cust">Who is eating this burger?</label>
-        <input type="text" id="cust{{id}}" name="name">
+      <br> {{#each burgers}} {{#unless devoured}}
+      <div class="burgers">
+        <b>{{burger_name}}</b>
+        <div class="form-group">
+          <label for="cust">Who is eating this burger?</label>
+          <input type="text" id="cust{{id}}" name="name">
+        </div>
+        <button class="devour-burg" data-id="{{id}}" data-devour="{{devoured}}">
+          Devour
+        </button>
       </div>
-      <button class="devour-burg" data-id="{{id}}" data-devour="{{devoured}}">
-        Devour
-      </button>
       <br> {{/unless}} {{/each}}
     </div>
   </div>
   <br>
   <div class="col-md-6" id="devouredSection">
     <h3>Burgers that have been devoured...</h3>
-    <br> {{#each burgers}} {{#if devoured}} {{burger_name}}
-        (Eaten by... {{#each Customers}}{{customer_name}}{{/each}})
-    <br> {{/if}} {{/each}}
+    <br> {{#each burgers}} {{#if devoured}}
+    <div class="devoureds">
+      <b>{{burger_name}}</b> (Eaten by... {{#each Customers}}<b>{{customer_name}}</b>{{/each}})
+    </div>
+    <br>
+    {{/if}} {{/each}}
   </div>
 </div>
 <br>
