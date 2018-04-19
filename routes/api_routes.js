@@ -13,8 +13,10 @@ module.exports = function (app) {
   // GET route for getting all of the burgers
   app.get("/", function (req, res) {
     db.Burger.findAll({
+      include: [db.Customer]
     })
       .then(function (result) {
+        console.log(result);
         var burgerObj = {
           burgers: result
         }
@@ -47,8 +49,6 @@ module.exports = function (app) {
 
   // PUT route for updating burgers
   app.put("/api/burgers/:id", function (req, res) {
-    console.log(req.params.id);
-    console.log(req.body);
     db.Burger.update(req.body,
       {
         where: {
