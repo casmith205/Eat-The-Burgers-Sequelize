@@ -1,7 +1,7 @@
 # Eat-The-Burgers-Sequelize
 
 ## About
-Add a burger you would like to eat, devour the burger, and see what burgers others have created and devoured!
+Add a burger you would like to eat, devour the burger, and see what other burgers have been created and devoured!
 
 ## Motivation
 Project demonstrating the use of Sequelize in a Full Stack Application
