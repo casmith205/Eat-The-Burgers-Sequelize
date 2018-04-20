@@ -14,3 +14,6 @@ Just open the live link in any browser!
 
 ## Technologies Used
 HTML, CSS, Bootstrap, JavaScript, jQuery, Handlebars.js, Express.js, MySQL, Sequelize.js, APIs, JSON, Node.js
+
+## License
+MIT License
